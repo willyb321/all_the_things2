@@ -5,6 +5,8 @@ block content
 	section.hero.is-primary.is-bold
 		.hero-body
 			.container
+				a(href='https://github.com/willyb321' target='_blank')
+					img.image.is-128x128.right(src='https://avatars0.githubusercontent.com/u/9222609?v=3')
 				h1.title All of my projects!
 				h2.subtitle Well, the public ones at least.
 	hr
@@ -15,4 +17,3 @@ block content
 					.box
 						li(href= val.html_url)= val.name + ' - ' + val.description
 							a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
-					hr
