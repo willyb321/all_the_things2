@@ -1,6 +1,5 @@
 extends _layouts/base
 
-include _modules/link/link
 
 block content
 	section.hero.is-primary.is-bold
@@ -13,7 +12,7 @@ block content
 		div#repos
 			ul
 				each val,ind in site.data.repos
-					hr
 					.box
 						li(href= val.html_url)= val.name + ' - ' + val.description
 							a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
+					hr
