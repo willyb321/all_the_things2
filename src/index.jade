@@ -15,5 +15,9 @@ block content
 			ul
 				each val,ind in site.data.repos
 					.box
-						li(href= val.html_url)= val.name + ' - ' + val.description
-							a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
+						if val.description !== null
+							li(href= val.html_url)= val.name + ' - ' + val.description
+								a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
+						else
+							li(href= val.html_url)= val.name
+								a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
