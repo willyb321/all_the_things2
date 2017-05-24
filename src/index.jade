@@ -16,7 +16,7 @@ block content
 				each val,ind in site.data.repos
 					.box
 						if val.description !== null
-							li(href= val.html_url)= val.name + ' - ' + val.description
+							li= val.name + ' (' + val.stargazers_count + '⭐' + ')' + ' - ' + val.description
 								a(href= val.html_url target="_blank")= ' (' + val.full_name + ')'
 						else
 							li(href= val.html_url)= val.name
